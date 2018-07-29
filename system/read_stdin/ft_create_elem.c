@@ -22,3 +22,4 @@ t_list		*ft_create_elem(void *data)
 	elem->next = NULL;
 	return (elem);
 }
+ghyjxdyjkxyxykxyuk
