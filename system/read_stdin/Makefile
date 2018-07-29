@@ -7,6 +7,9 @@ all: $(NAME)
 $(NAME) : 
 	gcc $(CFLAGS) $(SRC)
 
+run :
+	./$(NAME)
+
 clean:
 	rm -f $(NAME)
 
