@@ -1,5 +1,4 @@
-#include "ft_list.h"
-#include <stdio.h>
+#include "../includes/ft_list.h"
 
 t_list		*get_stdin()
 {

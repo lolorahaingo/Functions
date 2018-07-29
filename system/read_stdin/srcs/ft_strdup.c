@@ -1,24 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_elem.c                                   :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrahaing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/18 18:02:11 by lrahaing          #+#    #+#             */
-/*   Updated: 2018/07/23 20:17:16 by lrahaing         ###   ########.fr       */
+/*   Created: 2018/07/10 19:23:06 by lrahaing          #+#    #+#             */
+/*   Updated: 2018/07/18 15:02:01 by lrahaing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "../includes/ft_list.h"
 
-t_list		*ft_create_elem(void *data)
+int		ft_strlen(char *str)
 {
-	t_list	*elem;
+	int	i;
 
-	if (!(elem = (t_list *)malloc(sizeof(t_list))))
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+char		*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+char		*ft_strdup(char *src)
+{
+	char	*dest;
+
+	if (!(dest = (char *)malloc(sizeof(*src) * ft_strlen(src) + 1)))
 		return (NULL);
-	elem->data = data;
-	elem->next = NULL;
-	return (elem);
+	ft_strcpy(dest, src);
+	return (dest);
 }
