@@ -1,11 +1,13 @@
 SRC = ft_create_elem.c ft_list_push_back.c main.c ft_read_stdin.c
+NAME = read.out
+CFLAGS = -Wall -Wextra -Werror
 
-all: a.out
+all: $(NAME)
 
-a.out : 
-	gcc -Wall -Wextra -Werror $(SRC)
+$(NAME) : 
+	gcc $(CFLAGS) $(SRC)
 
 clean:
-	rm a.out
+	rm -f $(NAME)
 
 re: clean all 
