@@ -17,7 +17,7 @@ void		print_list(t_list *list)
 {
 	while (list != NULL)
 	{
-		printf("%c ->", *((char *)list->data));
+		printf("%p ->", ((int *)list->data));
 		list = list->next;
 	}
 	printf("NULL");
@@ -25,6 +25,7 @@ void		print_list(t_list *list)
 
 int			main (void)
 {
-	print_list(get_stdin(0));
+	t_list *begin_list = get_stdin(0);
+	print_list(begin_list);
 	return (0);
 }
