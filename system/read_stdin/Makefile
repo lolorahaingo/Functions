@@ -1,4 +1,4 @@
-SRC = ft_create_elem.c ft_list_push_back.c main.c ft_read_stdin.c
+SRC = ft_create_elem.c ft_list_push_back.c main.c ft_read_stdin.c ft_strdup.c
 NAME = read.out
 CFLAGS = -Wall -Wextra -Werror
 

@@ -1,31 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrahaing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/19 14:27:23 by lrahaing          #+#    #+#             */
-/*   Updated: 2018/07/25 14:48:59 by lrahaing         ###   ########.fr       */
+/*   Created: 2018/07/10 19:23:06 by lrahaing          #+#    #+#             */
+/*   Updated: 2018/07/18 15:02:01 by lrahaing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-#include <stdio.h>
+#include <stdlib.h>
 
-void		print_list(t_list *list)
+int			ft_strlen(char *str)
 {
-	while (list != NULL)
+	int		i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		printf("%c ->", *((char *)list->data));
-		list = list->next;
+		i++;
 	}
-	printf("NULL");
+	return (i);
 }
 
-int			main (void)
+char		*ft_strcpy(char *dest, char *src)
 {
-	
-	printf("%s", convert_to_char(get_stdin()));
-	return (0);
+	int		i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+char		*ft_strdup(char *src)
+{
+	char	*dest;
+
+	if (!(dest = (char *)malloc(sizeof(*src) * ft_strlen(src) + 1)))
+		return (NULL);
+	ft_strcpy(dest, src);
+	return (dest);
 }
