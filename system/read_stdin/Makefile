@@ -5,10 +5,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) : 
-	gcc $(CFLAGS) $(SRC)
-
-run :
-	./$(NAME)
+	gcc $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -f $(NAME)
