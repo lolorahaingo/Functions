@@ -27,7 +27,8 @@ char		*convert_to_char(t_list *begin_list)
 		tmp = tmp->next;
 		i++;
 	}
-	str = (char *)malloc(sizeof(char) * (i  + 1));
+	if (!(str = (char *)malloc(sizeof(char) * (i  + 1))))
+		return (NULL);
 	tmp = begin_list;
 	i = 0;
 	while (tmp != NULL)

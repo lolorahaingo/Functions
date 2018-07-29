@@ -13,17 +13,7 @@
 #include "ft_list.h"
 #include <stdio.h>
 
-void		print_list(t_list *list)
-{
-	while (list != NULL)
-	{
-		printf("%c ->", *((char *)list->data));
-		list = list->next;
-	}
-	printf("NULL");
-}
-
-int			main (void)
+int	main (void)
 {
 	
 	printf("%s", convert_to_char(get_stdin()));

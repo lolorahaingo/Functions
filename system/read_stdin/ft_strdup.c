@@ -13,21 +13,19 @@
 #include "ft_list.h"
 #include <stdlib.h>
 
-int			ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 
 char		*ft_strcpy(char *dest, char *src)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (src[i] != '\0')
