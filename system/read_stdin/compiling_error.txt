@@ -1,0 +1,3 @@
+/tmp/ccsxlc4V.o : Dans la fonction « main » :
+/home/mathis/gitLaurent/Functions/system/read_stdin/main.c:28 : référence indéfinie vers « get_stdin »
+collect2: error: ld a retourné le statut de sortie 1
