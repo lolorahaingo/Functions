@@ -7,12 +7,12 @@ t_list		*get_command()
 
 	if (!(read(0, buf, 1) > 0) || buf[0] == '\n')
 		return (NULL);
-	begin_list = ft_create_elem(ft_strdup(buf));
+	begin_list = ft_create_elem(buf);
 	while (read(0, buf, 1) > 0)
 	{
 		if (buf[0] == '\n')
 			return (begin_list);
-		ft_list_push_back(&begin_list, ft_strdup(buf));
+		ft_list_push_back(&begin_list, buf);
 	}
 	return (NULL);
 }
